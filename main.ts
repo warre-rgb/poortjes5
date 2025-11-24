@@ -1,7 +1,9 @@
 basic.forever(function () {
-    if (!(Kitronik_Game_Controller.buttonIsPressed(Kitronik_Game_Controller.ControllerButtonPins.Up)) && (!(Kitronik_Game_Controller.buttonIsPressed(Kitronik_Game_Controller.ControllerButtonPins.Down)) && !(Kitronik_Game_Controller.buttonIsPressed(Kitronik_Game_Controller.ControllerButtonPins.Left) && !(Kitronik_Game_Controller.buttonIsPressed(Kitronik_Game_Controller.ControllerButtonPins.Right))))) {
-        basic.showNumber(1)
-    } else {
-        basic.showNumber(0)
+    if (input.buttonIsPressed(Button.A)) {
+        let knuffel = 0
+        let voeding = 0
+        if (voeding < 10 && knuffel < 10) {
+            basic.showIcon(IconNames.Happy)
+        }
     }
 })
