@@ -15,11 +15,10 @@ basic.forever(function () {
     if (knuffel > 10 && voeding > 10) {
         basic.showIcon(IconNames.Happy)
     }
-    if (voeding < 10 && voeding > dood || knuffel < dood && voeding < dood) {
+    if (knuffel > dood && knuffel < 10 || voeding < 10 && voeding > dood) {
         basic.showIcon(IconNames.Sad)
     }
-    if (true) {
-        knuffel += 0
+    if (knuffel < dood || voeding < dood) {
         basic.showLeds(`
             . . . . .
             # # . # #
@@ -27,5 +26,9 @@ basic.forever(function () {
             . # # # .
             . . . . .
             `)
+        dood += 1
+    }
+    if (dood == 0) {
+    	
     }
 })
